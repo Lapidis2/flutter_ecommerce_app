@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_app/constants/theme.dart';
-import 'package:flutter_test_app/screens/wecome/welcome.dart';
+import 'package:flutter_ecommerce_app/constants/theme.dart';
+import 'package:flutter_ecommerce_app/screens/wecome/welcome.dart';
 void main() {
   runApp(const MyApp());
 }

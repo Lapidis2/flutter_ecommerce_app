@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_test_app/constants/assets_images.dart';
-import 'package:flutter_test_app/constants/routes.dart';
-import 'package:flutter_test_app/screens/auth_ui/login/login.dart';
-import 'package:flutter_test_app/screens/auth_ui/signup/sign_up.dart';
-import 'package:flutter_test_app/widgets/primary_button/primary_button.dart';
-import 'package:flutter_test_app/widgets/top_tiles/top_tiles.dart';
+import 'package:flutter_ecommerce_app/constants/assets_images.dart';
+import 'package:flutter_ecommerce_app/constants/routes.dart';
+import 'package:flutter_ecommerce_app/screens/auth_ui/login/login.dart';
+import 'package:flutter_ecommerce_app/screens/auth_ui/signup/sign_up.dart';
+import 'package:flutter_ecommerce_app/widgets/primary_button/primary_button.dart';
+import 'package:flutter_ecommerce_app/widgets/top_tiles/top_tiles.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
