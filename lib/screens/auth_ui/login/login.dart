@@ -57,7 +57,7 @@ class _LoginState extends State<Login> {
                 style: TextStyle(decoration: TextDecoration.none),
               ),
             ),
-            SizedBox(height: 12.0),
+            SizedBox(height: 13.0),
             Center(
               child: CupertinoButton(
                 onPressed: () {
