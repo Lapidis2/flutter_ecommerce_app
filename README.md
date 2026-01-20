@@ -1,16 +1,32 @@
-# flutter_test_app
+# 🛒 Flutter E-Commerce App
 
-A new Flutter project.
+A modern and scalable **E-Commerce Mobile Application** built with **Flutter**, supporting product browsing, cart management, checkout flow, and user authentication.  
+The app follows clean architecture and is optimized for performance and maintainability.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+##  Features
 
-A few resources to get you started if this is your first Flutter project:
+-  User Authentication (Login / Register)
+- Product Listing & Categories
+- Product Search & Filtering
+-  Wishlist Management
+-  Add to Cart & Cart Management
+- Checkout Flow
+-  Order History
+-  User Profile Management
+-  Light & Dark Mode
+-  Responsive UI (Android & iOS)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##  Tech Stack
+
+- **Framework:** Flutter (Dart)
+- **State Management:** Provider **
+- **Backend:** Firebase / REST API **
+- **Database:** Firestore **
+- **Authentication:** Firebase Auth / API Auth
+- **Payment Gateway:** Stripe *
+
+---
