@@ -48,7 +48,7 @@ class _LoginState extends State<Login> {
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 12.0),
+            SizedBox(height: 13.0),
             PrimaryButton(title: "Login", onPressed: () {}),
             SizedBox(height: 12.0),
             Center(
