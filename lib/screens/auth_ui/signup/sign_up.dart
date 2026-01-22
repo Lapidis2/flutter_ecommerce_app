@@ -16,55 +16,75 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
     appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-         crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TopTiles(title: "Create Account", subtitle: "Welcome To Jean Shop!"),
-            SizedBox(height: 13.0),
-            TextField(
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.email),
-                labelText: 'Email',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            SizedBox(height: 16.0),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+           crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TopTiles(title: "Create Account", subtitle: "Welcome To Jean Shop!"),
+              SizedBox(height: 13.0),
               TextField(
-                obscureText: _isPasswordVisible,
-              decoration: InputDecoration(
-              
-                prefixIcon: Icon(Icons.lock),
-                suffixIcon: CupertinoButton(
-                  onPressed: () {
-                    setState(() {
-                      _isPasswordVisible = !_isPasswordVisible;
-                    });
-                  },
-                  child: Icon(Icons.visibility),
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.person_2_outlined),
+                  labelText: 'UserName',
+                  border: OutlineInputBorder(),
                 ),
-                labelText: 'Password',
-                border: OutlineInputBorder(),
               ),
-            ),
-            SizedBox(height: 12.0),
-            PrimaryButton(title: "SignUp", onPressed: () {}),
-            SizedBox(height: 12.0),
-            Center(
-              child: Text('Don\'t have an account?',
-               style: TextStyle(
-                decoration: TextDecoration.none,
-              ),),
-            ),
-               SizedBox(height: 12.0),
-               Center(
-                 child: CupertinoButton(
-                   onPressed: () {},
-                   child: Text('Create Account',style: TextStyle(color: Theme.of(context).primaryColor),),
+              SizedBox(height: 16.0),
+               TextField(
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.email),
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 16.0),
+               TextField(
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.phone),
+                  labelText: 'Phone',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 16.0),
+                TextField(
+                  obscureText: _isPasswordVisible,
+                decoration: InputDecoration(
+                
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: CupertinoButton(
+                    onPressed: () {
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;
+                      });
+                    },
+                    child: Icon(Icons.visibility),
+                  ),
+                  labelText: 'Password',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: 12.0),
+              PrimaryButton(title: "SignUp", onPressed: () {}),
+              SizedBox(height: 12.0),
+              Center(
+                child: Text('I already have account!',
+                 style: TextStyle(
+                  decoration: TextDecoration.none,
+                ),),
+              ),
+                 SizedBox(height: 12.0),
+                 Center(
+                   child: CupertinoButton(
+                     onPressed: () {},
+                     child: Text('Login here ',style: TextStyle(color: Theme.of(context).primaryColor),),
+                   ),
                  ),
-               ),
-          ],
+            ],
+          ),
         ),
       ),
     );
