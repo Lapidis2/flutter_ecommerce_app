@@ -10,7 +10,8 @@ class FirebaseAuthHelper {
     String email,
     String password,
     BuildContext context,
-  ) async {
+  ) 
+  async {
     try {
       showLoaderDialog(context);
       await _auth.signInWithEmailAndPassword(email: email, password: password);
@@ -22,6 +23,29 @@ class FirebaseAuthHelper {
       Navigator.of(context).pop(); 
       showMessage(getMessageFromErrorCode(e.code));
     }
+      return false;
+    }
+  }
+
+  Future<bool> signUp(
+    String email,
+    String password,
+    String name,
+    String phone,
+    BuildContext context,
+  ) async {
+    try {
+      showLoaderDialog(context);
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      if (context.mounted) Navigator.of(context).pop();
+      showMessage("Account created successfully!");
+      return true;
+    } on FirebaseAuthException catch (e) {
+      if (context.mounted) {
+        Navigator.of(context).pop();
+        showMessage(getMessageFromErrorCode(e.code));
+      }
       return false;
     }
   }

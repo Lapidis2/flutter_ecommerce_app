@@ -1,12 +1,9 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce_app/constants/routes.dart';
 import 'package:flutter_ecommerce_app/constants/toast.dart';
 import 'package:flutter_ecommerce_app/firebase_helpers/firebase_auth/firebase_auth.dart';
 import 'package:flutter_ecommerce_app/screens/auth_ui/signup/sign_up.dart';
-import 'package:flutter_ecommerce_app/screens/wecome/welcome.dart';
 import 'package:flutter_ecommerce_app/widgets/primary_button/primary_button.dart';
 import 'package:flutter_ecommerce_app/widgets/top_tiles/top_tiles.dart';
 
@@ -21,6 +18,7 @@ class _LoginState extends State<Login> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   bool _isPasswordVisible = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,15 +58,12 @@ class _LoginState extends State<Login> {
             SizedBox(height: 13.0),
             PrimaryButton(
               title: "Login",
-              onPressed: () async{
-               bool isValidated= loginValid(email.text, password.text);
-               if(isValidated){
-               bool isLogin=await FirebaseAuthHelper.instance.login(email.text, password.text, context);
-               if(isLogin){
-               
-                 Routes.instance.pushandremoveuntil(widget: Home(), context: context);
-               }
-               }
+              onPressed: () async {
+                bool isValidated = loginValid(email.text, password.text);
+                if (isValidated) {
+                  await FirebaseAuthHelper.instance
+                      .login(email.text, password.text,context);
+                }
               },
             ),
             SizedBox(height: 12.0),

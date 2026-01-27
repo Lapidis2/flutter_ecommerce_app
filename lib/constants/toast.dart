@@ -64,6 +64,31 @@ bool loginValid(String email, String password) {
     return true;
   }
 }
+bool signupValid(String email, String password,String name,String phone) {
+  if (email.isEmpty && password.isEmpty &&name.isEmpty&&phone.isEmpty) {
+    showMessage('all fields are required');
+    return false;
+  } else if (email.isEmpty) {
+    showMessage('Please enter email');
+    return false;
+  } 
+  else if (password.isEmpty) {
+    showMessage('Please enter password');
+    return false;
+  } 
+   else if (name.isEmpty) {
+    showMessage('Please enter name');
+    return false;
+  } 
+  else if (phone.isEmpty) {
+    showMessage('Please enter phone');
+    return false;
+  }
+    
+  else {
+    return true;
+  }
+}
 
 String getMessageFromErrorCode(String errorCode) {
   switch (errorCode) {
