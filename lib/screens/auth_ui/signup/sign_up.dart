@@ -79,7 +79,9 @@ class _SignUpState extends State<SignUp> {
                  SizedBox(height: 12.0),
                  Center(
                    child: CupertinoButton(
-                     onPressed: () {},
+                     onPressed: () {
+                      Navigator.pop(context);
+                     },
                      child: Text('Login here ',style: TextStyle(color: Theme.of(context).primaryColor),),
                    ),
                  ),
